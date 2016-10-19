@@ -6,5 +6,5 @@ target 'LEAmountInputViewDemo' do
   # use_frameworks!
 
   # Pods for LEAmountInputViewDemo
-  pod 'UIButton-ANDYHighlighted'
+  pod 'UIButton-ANDYHighlighted', '~> 0.2.1'
 end
