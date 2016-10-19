@@ -1,0 +1,12 @@
+PODS:
+  - UIButton-ANDYHighlighted (1.0.0)
+
+DEPENDENCIES:
+  - UIButton-ANDYHighlighted
+
+SPEC CHECKSUMS:
+  UIButton-ANDYHighlighted: da99b536b0b4a3c8d86c15c9b38cb10fddb09be6
+
+PODFILE CHECKSUM: 323f41d79490ffc33a9da87f2fae3e7be0890955
+
+COCOAPODS: 1.0.1
