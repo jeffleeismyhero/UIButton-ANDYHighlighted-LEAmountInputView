@@ -95,7 +95,7 @@
 - (void)setNumberStyle:(NSNumberFormatterStyle)numberStyle
 {
     self.numberFormatter.numberStyle = numberStyle;
-    
+
     self.placeholder = [self.numberFormatter currencyString:nil];
 }
 
@@ -156,25 +156,25 @@
 - (void)numberPad:(LENumberPad *)numberPad didSelectButtonAtIndexPath:(NSIndexPath *)indexPath
 {
     NSNumber *amount = @0;
-    
+
     if (indexPath.item != 9) {
         UIButton *button = [numberPad buttonAtIndexPath:indexPath];
         NSMutableString *string = [NSMutableString stringWithString:self.text];
-        if (self.selectedTextRange) {
-            NSInteger idx = [self offsetFromPosition:self.beginningOfDocument toPosition:self.selectedTextRange.start];
-            [string insertString:button.titleLabel.text atIndex:idx];
-        } else {
+        // if (self.selectedTextRange) {
+        //     NSInteger idx = [self offsetFromPosition:self.beginningOfDocument toPosition:self.selectedTextRange.start];
+        //     [string insertString:button.titleLabel.text atIndex:idx];
+        // } else {
             [string appendString:button.titleLabel.text];
-        }
+        // }
         amount = [self.numberFormatter amountFromString:string];
     }
-    
+
     if ([amount isEqualToNumber:self.amount] || ![self shouldChangeAmount:amount]) {
         return;
     }
-    
+
     self.amount = amount;
-    
+
     [self didChangeAmount:amount];
 }
 
